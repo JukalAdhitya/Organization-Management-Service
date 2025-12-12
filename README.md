@@ -87,25 +87,8 @@ Interactive API documentation is automatically generated:
 
 ## 🏗️ Architecture & High-Level Design
 
-### System Diagram
-```mermaid
-graph TD
-    Client[Client / Frontend] -->|HTTP Request| API[FastAPI Application]
-    
-    subgraph "Application Layer"
-        API --> Routes[Routes / Controllers]
-        Routes --> Service[Service Layer (Business Logic)]
-        Service --> Utils[Auth & Helpers]
-    end
-    
-    subgraph "Data Layer"
-        Service --> DB_Master[Master DB (Metadata & Admins)]
-        Service --> DB_Dynamic[Dynamic Collections (org_clientA, org_clientB...)]
-    end
-    
-    DB_Master <--> MongoDB[(MongoDB Instance)]
-    DB_Dynamic <--> MongoDB
-```
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/849a5470-8ddb-4985-ac24-951ba62eff9e" />
+
 
 ### Architecture Analysis & Scalability
 
